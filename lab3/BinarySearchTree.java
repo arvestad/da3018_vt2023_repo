@@ -71,7 +71,7 @@ public class BinarySearchTree {
 
 	/**
 	 * Nodes in the search tree
-	 * This class should be sufficient for the project.
+	 * You may add attributes in this class if needed for an iterator.
 	 *
 	 */
 	public class BSTNode {
