@@ -17,20 +17,18 @@ public class Range implements Iterable<Integer> {
 	
 	public Iterator<Integer> iterator() {
 		RangeIterator iter = new RangeIterator();
-		iter.init(start, end, step);
+		iter.init(start);
 		return iter;
 	}
 
 	private class RangeIterator implements Iterator<Integer> {
-		int current, end, step;
+		int current;
 		
 		public RangeIterator() {
 		}
 		
-		public void init(int start, int end, int step) {
+		public void init(int start) {
 			current = start;
-			this.end = end;
-			this.step = step;
 		}
 		
 		public Integer next() {
@@ -40,7 +38,7 @@ public class Range implements Iterable<Integer> {
 		}
 		
 		public boolean hasNext() {
-			return current < this.end;
+			return current < end;
 		}
 	}
 
